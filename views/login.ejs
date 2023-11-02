@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    </head>
+    <body>
+        
+        <div class="form-container">
+            <h1>Login</h1>
+            
+            <form method="POST" action="/authenticate" class="entry-form">
+                <div class="entry-form-field">
+                    <span>Enter username:</span>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="entry-form-field">
+                    <span>Enter password:</span>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <input type="submit" name="submit-btn" value="login">
+                <span id="register-ad">Don't have an account? <a href="/register">Register!</a></span>
+            </form>
+            
+            <a class="return-index" href="/"> < Back</a>
+        </div>
+        <script src="../sketches/fractaltreesketch.js"></script>
+        
+    </body>
+</html>

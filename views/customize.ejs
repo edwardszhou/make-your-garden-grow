@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Customize Garden</title>
+        <script type="text/javascript" src="../scripts/customize-script.js"></script>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="modal" id="modal-section">
+            <h2 id="modal-title"></h2>
+            <span id="close-modal">&times;</span>
+            <form method="POST" action="/remove">
+                <label for="remove-submit-btn" id="remove-label">Remove Photo</label>
+                <input id="remove-hidden" type="hidden" name="imgTitle" value="">
+                <input type="hidden" name="panelnum" value="<%=panelNum%>">
+                <input id="remove-submit-btn" type="submit" name="remove-btn" value="" class="remove-submit-btn">
+            </form>
+            <img class="modal-content" id="modal-img">
+        </div>
+
+        <div class="form-container">
+            <h1 style="font-size: 4vw">Customize Bed <%=panelNum%></h1>
+            <a id="return-home" href="/home"> < Back to Home</a>
+            <h2 id="customization-instruc">Add things to your garden!</h2>
+            <div id="customization-container">
+                
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+                    <div class="entry-form-field">
+                        <span>Choose name:</span>
+                        <input type="text" name="name" placeholder="Thing Name">
+                    </div>
+                    <div class="entry-form-field">
+                        <span>Choose image:</span>
+                        <div>
+                        <label for="customization-upload" class="file-upload-label" id="customization-label">Browse</label>
+                        <input id="customization-upload" type="file" name="image">
+                        </div>
+                    </div>
+                    <input type="hidden" name="panelnum" value="<%=panelNum%>">
+                    <input type="submit" name="submitbutton" value="Upload">
+                </form>
+                <div id="customization-previews">
+                    <% images.forEach((image) => { %>
+                        <div>
+                            <img class="preview-img" src="<%=image.file%>" alt="<%=image.name%>">
+                        </div>
+                    <% }) %>
+                </div>
+            </div>       
+        </div>
+    </body>
+</html>

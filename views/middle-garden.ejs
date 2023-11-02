@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Make Our Garden Grow</title>
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" src="../scripts/middle-script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+
+    </head>
+    <body style="overflow: hidden">
+        <% if(volume.valueOf() == "on".valueOf()) { %>
+            <iframe src="../audio/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+            <audio class="music" id="middle-music" autoplay>
+                <source src="../audio/3.mp3" type="audio/mp3">
+            </audio>
+        <% } %>
+        <script src="../sketches/impactsketch1.js"></script>
+        <div class="grow-content">
+            <h1 id="middle-title1">And 
+                <br> Make Our Garden <br>
+                <span id="middle-title-grow">GROW</span></h1>
+
+            <a id="middle-continue" class="story-continue" href="/story-2?volume=<%=volume%>">
+                [Continue...]
+            </a>
+        </div>
+    </body>
+</html>

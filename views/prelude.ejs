@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Prelude</title>
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" src="../scripts/prelude-script.js"></script>
+    </head>
+    <body style="overflow: hidden">
+        
+        <% if(volume.valueOf() == "on".valueOf()) { %>
+            <iframe src="../audio/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+            <audio class="music" id="prelude-music" autoplay>
+                <source src="../audio/1.mp3" type="audio/mp3">
+            </audio>
+        <% } %>
+        <div id="prelude-content">
+            <p id="prelude-paragraph">
+                [CANDIDE] <br><em>
+                No, we won't think noble because we're not noble. <br>
+                We won't live in beautiful harmony because there's no such thing in this world nor should there be. <br>
+                We promise only to do our best and live out our lives. <br>
+                Dear God, that's all we can promise in truth. <br>
+                Marry me, Cunegonde. 
+            </em></p>
+            <a id="prelude-continue" class="story-continue" href="/story?volume=<%=volume%>">
+                [Continue...]
+            </a>
+        </div>
+    </body>
+</html>

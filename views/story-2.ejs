@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Make Your Garden Grow</title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+        <script type="text/javascript" src="../sketches/story2-sketch.js"></script>
+        <script type="text/javascript" src="../scripts/story2-script.js"></script>
+    </head>
+    <body style="background-color: rgba(2,27,12,1); overflow-x:hidden">
+        <% if(volume.valueOf() == "on".valueOf()) { %>
+            <iframe src="../audio/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+            <audio class="music" id="story2-music" autoplay>
+                <source src="../audio/4.mp3" type="audio/mp3">
+            </audio>
+        <% } %>
+        <div id="flower-sketches"></div>
+        <div class="story-content">
+            <div class="story-frame" id="story-frame-6">
+                <h2 class="story-line-1">Let dreamers dream what worlds they please</h2>
+                <h2 class="story-line-2">Those Edens can’t be found</h2>
+                <% images.forEach((image) => { %>
+                    <% if(image.panel == 6) { %>
+                    <div>
+                        <%let randX = Math.floor(Math.random()*100)%>
+                        <%let randY = Math.floor(Math.random()*100)%>
+                        <%let randOpacity = 0.5+Math.floor(Math.random()*50)%>
+                        <img class="story-img" style="left:<%=randX%>%; top: <%=randY%>%; opacity:<%=randOpacity%>%"src="<%=image.file%>" alt="<%=image.name%>">
+                    </div>
+                    <% } %>
+                <% }) %>
+            </div>
+            <div class="story-frame" id="story-frame-7">
+                <h2 class="story-line-1">The sweetest flowers, the fairest trees</h2>
+                <h2 class="story-line-2">Are grown in solid ground</h2>
+                <% images.forEach((image) => { %>
+                    <% if(image.panel == 7) { %>
+                    <div>
+                        <%let randX = Math.floor(Math.random()*100)%>
+                        <%let randY = Math.floor(Math.random()*100)%>
+                        <%let randOpacity = 0.5+Math.floor(Math.random()*50)%>
+                        <img class="story-img" style="left:<%=randX%>%; top: <%=randY%>%; opacity:<%=randOpacity%>%"src="<%=image.file%>" alt="<%=image.name%>">
+                    </div>
+                    <% } %>
+                <% }) %>
+            </div>
+            <div class="story-frame" id="story-frame-8">
+                <h2 class="story-line-1">We’re neither pure nor wise nor good</h2>
+                <h2 class="story-line-2">we’ll do the best we know</h2>
+                <% images.forEach((image) => { %>
+                    <% if(image.panel == 8) { %>
+                    <div>
+                        <%let randX = Math.floor(Math.random()*100)%>
+                        <%let randY = Math.floor(Math.random()*100)%>
+                        <%let randOpacity = 0.5+Math.floor(Math.random()*50)%>
+                        <img class="story-img" style="left:<%=randX%>%; top: <%=randY%>%; opacity:<%=randOpacity%>%"src="<%=image.file%>" alt="<%=image.name%>">
+                    </div>
+                    <% } %>
+                <% }) %>
+            </div>
+            <div class="story-frame" id="story-frame-9">
+                <h2 class="story-line-1">We’ll build our house and chop our wood...</h2>
+                <% images.forEach((image) => { %>
+                    <% if(image.panel == 9) { %>
+                    <div>
+                        <%let randX = Math.floor(Math.random()*100)%>
+                        <%let randY = Math.floor(Math.random()*100)%>
+                        <%let randOpacity = 0.5+Math.floor(Math.random()*50)%>
+                        <img class="story-img" style="left:<%=randX%>%; top: <%=randY%>%; opacity:<%=randOpacity%>%"src="<%=image.file%>" alt="<%=image.name%>">
+                    </div>
+                    <% } %>
+                <% }) %>
+            </div>
+            <a class="story-continue story-line-2" href="/final-garden?volume=<%=volume%>">
+                [Continue...]
+            </a>
+        </div>
+    </body>
+</html>
