@@ -3,7 +3,10 @@
 An interactive storytelling website inspired by Leonard Berstein's _Candide_ operetta
   
 Live at http://esz7923.imany.io:3333/  
+  
+Edward Zhou 05/2023
 
+Description
 ---
 
 **Description:**  
